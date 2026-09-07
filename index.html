@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Senaida Tenorio | Cybersecurity & Automation</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f17;
+      color: #e7edf5;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 23, 0.95);
+      border-bottom: 1px solid #1f2937;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: #aeb8c6;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    header {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 0;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #66e3c4;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      color: #aab4c3;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #95a0af;
+      font-size: 1.05rem;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 10px;
+      border: 1px solid #2b3646;
+      transition: 0.25s ease;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: #66e3c4;
+      color: #08120f;
+      border-color: #66e3c4;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary:hover {
+      background: #151c27;
+    }
+
+    section {
+      padding: 90px 0;
+      border-top: 1px solid #18202c;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      color: #8f9baa;
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111722;
+      border: 1px solid #202a38;
+      border-radius: 14px;
+      padding: 24px;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #66e3c4;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #95a0af;
+      font-size: 0.95rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #18212d;
+      color: #b8c2cf;
+      border: 1px solid #263244;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      padding: 10px 15px;
+      background: #111722;
+      border: 1px solid #253142;
+      border-radius: 10px;
+      color: #c2cad4;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #66e3c4;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      padding: 50px 0;
+      text-align: center;
+      color: #728092;
+      border-top: 1px solid #18202c;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      header {
+        min-height: auto;
+        padding: 100px 0 70px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-container">
+
+      <div class="logo">ST</div>
+
+      <div class="nav-links">
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#learning">Aprendiendo</a>
+        <a href="#contact">Contacto</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <header>
+    <div class="container">
+
+      <div class="hero">
+
+        <div class="eyebrow">
+          CYBERSECURITY · AUTOMATION · TECHNOLOGY
+        </div>
+
+        <h1>Senaida Tenorio</h1>
+
+        <h2>
+          Construyendo experiencia práctica en ciberseguridad y automatización.
+        </h2>
+
+        <p>
+          Este portafolio reúne proyectos, prácticas y herramientas que voy
+          desarrollando mientras continúo fortaleciendo mis conocimientos
+          técnicos en ciberseguridad, automatización y tecnología.
+        </p>
+
+        <div class="buttons">
+
+          <a class="btn btn-primary" href="#projects">
+            Ver proyectos
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/Senaidaliss13"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <section id="about">
+    <div class="container">
+
+      <h2 class="section-title">Sobre mí</h2>
+
+      <p class="section-subtitle">
+        Me interesa desarrollar una carrera en el área tecnológica,
+        especialmente en ciberseguridad y automatización.
+        Actualmente estoy fortaleciendo mis conocimientos mediante
+        proyectos prácticos, documentación y aprendizaje continuo.
+      </p>
+
+      <div class="card">
+
+        <p>
+          Mi objetivo con este portafolio es documentar de forma clara
+          los proyectos que voy realizando, las herramientas que utilizo
+          y las habilidades que desarrollo en el proceso.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="skills">
+    <div class="container">
+
+      <h2 class="section-title">Technical Skills</h2>
+
+      <p class="section-subtitle">
+        Herramientas y tecnologías con las que he trabajado o que estoy
+        desarrollando actualmente.
+      </p>
+
+      <div class="skills">
+
+        <span class="skill">n8n</span>
+        <span class="skill">Workflow Automation</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">AI Agents</span>
+        <span class="skill">Gmail Integrations</span>
+        <span class="skill">Conditional Logic</span>
+        <span class="skill">Cybersecurity Fundamentals</span>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="projects">
+    <div class="container">
+
+      <h2 class="section-title">Featured Projects</h2>
+
+      <p class="section-subtitle">
+        Algunos proyectos y prácticas que reflejan mi experiencia técnica.
+      </p>
+
+      <div class="grid">
+
+
+        <div class="card">
+
+          <span class="project-status">
+            AUTOMATION PROJECT
+          </span>
+
+          <h3>
+            Clasificación inteligente de correos con n8n
+          </h3>
+
+          <p>
+            Desarrollo de un workflow capaz de recibir correos,
+            obtener su contenido, analizarlo mediante inteligencia
+            artificial y dirigirlo automáticamente según su clasificación.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">n8n</span>
+            <span class="tag">Gmail</span>
+            <span class="tag">AI Agent</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Conditional Logic</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <span class="project-status">
+            CYBERSECURITY
+          </span>
+
+          <h3>
+            Cybersecurity Labs
+          </h3>
+
+          <p>
+            Espacio destinado a documentar laboratorios y ejercicios
+            prácticos relacionados con ciberseguridad, análisis,
+            redes y herramientas defensivas.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">Labs</span>
+            <span class="tag">Networking</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <span class="project-status">
+            COMING SOON
+          </span>
+
+          <h3>
+            Próximo proyecto
+          </h3>
+
+          <p>
+            Esta sección crecerá a medida que desarrolle nuevos
+            proyectos, automatizaciones y prácticas de ciberseguridad.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Learning</span>
+            <span class="tag">Projects</span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="learning">
+    <div class="container">
+
+      <h2 class="section-title">
+        Currently Learning
+      </h2>
+
+      <p class="section-subtitle">
+        Áreas en las que actualmente estoy fortaleciendo mis conocimientos.
+      </p>
+
+      <div class="grid">
+
+
+        <div class="card">
+
+          <h3>Automation</h3>
+
+          <p>
+            Creación de workflows, integraciones entre servicios,
+            automatización de procesos y utilización de
+            inteligencia artificial.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>Cybersecurity</h3>
+
+          <p>
+            Fundamentos de seguridad, redes, análisis de amenazas
+            y herramientas utilizadas en entornos de ciberseguridad.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>Technical Documentation</h3>
+
+          <p>
+            Documentación de proyectos y procesos técnicos de
+            forma clara, estructurada y profesional.
+          </p>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="container">
+
+      <h2 class="section-title">
+        Contacto
+      </h2>
+
+      <p class="section-subtitle">
+        Interesada en oportunidades para continuar desarrollando
+        experiencia práctica en tecnología, automatización y ciberseguridad.
+      </p>
+
+      <div class="buttons">
+
+
+        <a
+          class="btn btn-primary"
+          href="https://github.com/Senaidaliss13"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+
+        <a
+          class="btn btn-secondary"
+          href="https://www.linkedin.com/in/senaidatenorio/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          class="btn btn-secondary"
+          href="mailto:senaida.tenorio.rudas@gmail.com"
+        >
+          Email
+        </a>
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+
+    <div class="container">
+      © 2026 Senaida Tenorio · Cybersecurity & Automation Portfolio
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
