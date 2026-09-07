@@ -1,567 +1,803 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Senaida Tenorio | Cybersecurity & Automation</title>
+<meta charset="UTF-8">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b0f17;
-      color: #e7edf5;
-      line-height: 1.6;
-    }
+<title>Senaida Tenorio | Technology Portfolio</title>
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+<style>
 
-    .container {
-      width: min(1100px, 90%);
-      margin: 0 auto;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(11, 15, 23, 0.95);
-      border-bottom: 1px solid #1f2937;
-      backdrop-filter: blur(10px);
-    }
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0f17;
+color:#e7edf5;
+line-height:1.6;
+}
 
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-    }
+a{
+text-decoration:none;
+color:inherit;
+}
 
-    .logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+.container{
+width:min(1100px,90%);
+margin:auto;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      font-size: 0.95rem;
-      color: #aeb8c6;
-    }
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(11,15,23,.95);
+border-bottom:1px solid #1f2937;
+backdrop-filter:blur(10px);
+}
 
-    .nav-links a:hover {
-      color: #ffffff;
-    }
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
 
-    header {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      padding: 80px 0;
-    }
+.logo{
+font-weight:700;
+letter-spacing:2px;
+}
 
-    .hero {
-      max-width: 850px;
-    }
+.nav-links{
+display:flex;
+gap:24px;
+font-size:.9rem;
+color:#aeb8c6;
+}
 
-    .eyebrow {
-      color: #66e3c4;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
+.nav-links a:hover{
+color:#66e3c4;
+}
 
-    h1 {
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 1;
-      margin-bottom: 24px;
-    }
+header{
+min-height:90vh;
+display:flex;
+align-items:center;
+padding:80px 0;
+}
 
-    .hero h2 {
-      font-size: clamp(1.3rem, 3vw, 2rem);
-      color: #aab4c3;
-      font-weight: 500;
-      margin-bottom: 24px;
-    }
+.hero{
+max-width:850px;
+}
 
-    .hero p {
-      max-width: 720px;
-      color: #95a0af;
-      font-size: 1.05rem;
-      margin-bottom: 34px;
-    }
+.eyebrow{
+color:#66e3c4;
+font-size:.9rem;
+letter-spacing:2px;
+font-weight:bold;
+margin-bottom:18px;
+}
 
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+h1{
+font-size:clamp(3rem,7vw,6rem);
+line-height:1;
+margin-bottom:24px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 13px 20px;
-      border-radius: 10px;
-      border: 1px solid #2b3646;
-      transition: 0.25s ease;
-      font-weight: 600;
-    }
+.hero h2{
+font-size:clamp(1.4rem,3vw,2rem);
+color:#aab4c3;
+font-weight:500;
+margin-bottom:24px;
+}
 
-    .btn-primary {
-      background: #66e3c4;
-      color: #08120f;
-      border-color: #66e3c4;
-    }
+.hero p{
+max-width:750px;
+color:#95a0af;
+font-size:1.05rem;
+margin-bottom:34px;
+}
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
+.buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
 
-    .btn-secondary:hover {
-      background: #151c27;
-    }
+.btn{
+display:inline-block;
+padding:13px 20px;
+border-radius:10px;
+border:1px solid #2b3646;
+font-weight:600;
+transition:.25s;
+}
 
-    section {
-      padding: 90px 0;
-      border-top: 1px solid #18202c;
-    }
+.btn-primary{
+background:#66e3c4;
+color:#08120f;
+border-color:#66e3c4;
+}
 
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 14px;
-    }
+.btn:hover{
+transform:translateY(-2px);
+}
 
-    .section-subtitle {
-      color: #8f9baa;
-      margin-bottom: 40px;
-      max-width: 700px;
-    }
+.btn-secondary:hover{
+background:#151c27;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+section{
+padding:90px 0;
+border-top:1px solid #18202c;
+}
 
-    .card {
-      background: #111722;
-      border: 1px solid #202a38;
-      border-radius: 14px;
-      padding: 24px;
-      transition: 0.25s ease;
-    }
+.section-title{
+font-size:2rem;
+margin-bottom:14px;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #66e3c4;
-    }
+.section-subtitle{
+color:#8f9baa;
+margin-bottom:40px;
+max-width:750px;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
 
-    .card p {
-      color: #95a0af;
-      font-size: 0.95rem;
-    }
+.card{
+background:#111722;
+border:1px solid #202a38;
+border-radius:14px;
+padding:25px;
+transition:.25s;
+}
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
+.card:hover{
+transform:translateY(-4px);
+border-color:#66e3c4;
+}
 
-    .tag {
-      font-size: 0.8rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #18212d;
-      color: #b8c2cf;
-      border: 1px solid #263244;
-    }
+.card h3{
+margin-bottom:12px;
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+.card p{
+color:#95a0af;
+font-size:.95rem;
+}
 
-    .skill {
-      padding: 10px 15px;
-      background: #111722;
-      border: 1px solid #253142;
-      border-radius: 10px;
-      color: #c2cad4;
-    }
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
 
-    .project-status {
-      display: inline-block;
-      margin-bottom: 14px;
-      color: #66e3c4;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+.skill{
+padding:10px 15px;
+background:#111722;
+border:1px solid #253142;
+border-radius:10px;
+color:#c2cad4;
+}
 
-    footer {
-      padding: 50px 0;
-      text-align: center;
-      color: #728092;
-      border-top: 1px solid #18202c;
-    }
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:18px;
+}
 
-    @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
+.tag{
+font-size:.8rem;
+padding:6px 10px;
+border-radius:999px;
+background:#18212d;
+border:1px solid #263244;
+color:#b8c2cf;
+}
 
-      header {
-        min-height: auto;
-        padding: 100px 0 70px;
-      }
+.status{
+display:inline-block;
+margin-bottom:14px;
+color:#66e3c4;
+font-size:.8rem;
+font-weight:bold;
+letter-spacing:1px;
+}
 
-      h1 {
-        font-size: 3rem;
-      }
-    }
-  </style>
+.evidence{
+margin-top:20px;
+padding-top:18px;
+border-top:1px solid #253142;
+color:#8995a5;
+font-size:.9rem;
+}
+
+.learning-card{
+border-left:3px solid #66e3c4;
+}
+
+footer{
+padding:50px 0;
+text-align:center;
+color:#728092;
+border-top:1px solid #18202c;
+}
+
+@media(max-width:720px){
+
+.nav-links{
+display:none;
+}
+
+header{
+min-height:auto;
+padding:100px 0 70px;
+}
+
+h1{
+font-size:3rem;
+}
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <nav>
-    <div class="container nav-container">
 
-      <div class="logo">ST</div>
+<nav>
 
-      <div class="nav-links">
-        <a href="#about">Sobre mí</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#learning">Aprendiendo</a>
-        <a href="#contact">Contacto</a>
-      </div>
+<div class="container nav-container">
 
-    </div>
-  </nav>
+<div class="logo">
+ST
+</div>
 
+<div class="nav-links">
 
-  <header>
-    <div class="container">
+<a href="#about">Sobre mí</a>
 
-      <div class="hero">
+<a href="#areas">Áreas</a>
 
-        <div class="eyebrow">
-          CYBERSECURITY · AUTOMATION · TECHNOLOGY
-        </div>
+<a href="#skills">Herramientas</a>
 
-        <h1>Senaida Tenorio</h1>
+<a href="#projects">Proyectos</a>
 
-        <h2>
-          Construyendo experiencia práctica en ciberseguridad y automatización.
-        </h2>
+<a href="#learning">Aprendiendo</a>
 
-        <p>
-          Este portafolio reúne proyectos, prácticas y herramientas que voy
-          desarrollando mientras continúo fortaleciendo mis conocimientos
-          técnicos en ciberseguridad, automatización y tecnología.
-        </p>
+<a href="#contact">Contacto</a>
 
-        <div class="buttons">
+</div>
 
-          <a class="btn btn-primary" href="#projects">
-            Ver proyectos
-          </a>
+</div>
 
-          <a
-            class="btn btn-secondary"
-            href="https://github.com/Senaidaliss13"
-            target="_blank"
-          >
-            GitHub
-          </a>
+</nav>
 
-        </div>
 
-      </div>
+<header>
 
-    </div>
-  </header>
+<div class="container">
 
+<div class="hero">
 
-  <section id="about">
-    <div class="container">
+<div class="eyebrow">
+TECHNOLOGY · PROJECTS · CONTINUOUS LEARNING
+</div>
 
-      <h2 class="section-title">Sobre mí</h2>
+<h1>
+Senaida Tenorio
+</h1>
 
-      <p class="section-subtitle">
-        Me interesa desarrollar una carrera en el área tecnológica,
-        especialmente en ciberseguridad y automatización.
-        Actualmente estoy fortaleciendo mis conocimientos mediante
-        proyectos prácticos, documentación y aprendizaje continuo.
-      </p>
+<h2>
+Construyendo experiencia práctica en tecnología.
+</h2>
 
-      <div class="card">
+<p>
 
-        <p>
-          Mi objetivo con este portafolio es documentar de forma clara
-          los proyectos que voy realizando, las herramientas que utilizo
-          y las habilidades que desarrollo en el proceso.
-        </p>
+Este portafolio documenta mi crecimiento profesional a través de proyectos,
+herramientas y tecnologías que he aprendido a utilizar.
 
-      </div>
+Aquí presento de forma práctica lo que sé hacer, los proyectos que he
+desarrollado y las habilidades técnicas que continúo fortaleciendo.
 
-    </div>
-  </section>
+</p>
 
 
-  <section id="skills">
-    <div class="container">
+<div class="buttons">
 
-      <h2 class="section-title">Technical Skills</h2>
+<a class="btn btn-primary" href="#projects">
+Ver proyectos
+</a>
 
-      <p class="section-subtitle">
-        Herramientas y tecnologías con las que he trabajado o que estoy
-        desarrollando actualmente.
-      </p>
+<a
+class="btn btn-secondary"
+href="https://github.com/Senaidaliss13"
+target="_blank">
+GitHub
+</a>
 
-      <div class="skills">
+<a
+class="btn btn-secondary"
+href="https://www.linkedin.com/in/senaidatenorio/"
+target="_blank">
+LinkedIn
+</a>
 
-        <span class="skill">n8n</span>
-        <span class="skill">Workflow Automation</span>
-        <span class="skill">GitHub</span>
-        <span class="skill">AI Agents</span>
-        <span class="skill">Gmail Integrations</span>
-        <span class="skill">Conditional Logic</span>
-        <span class="skill">Cybersecurity Fundamentals</span>
+</div>
 
-      </div>
+</div>
 
-    </div>
-  </section>
+</div>
 
+</header>
 
-  <section id="projects">
-    <div class="container">
 
-      <h2 class="section-title">Featured Projects</h2>
+<section id="about">
 
-      <p class="section-subtitle">
-        Algunos proyectos y prácticas que reflejan mi experiencia técnica.
-      </p>
+<div class="container">
 
-      <div class="grid">
+<h2 class="section-title">
+Sobre mí
+</h2>
 
+<p class="section-subtitle">
 
-        <div class="card">
+Me interesa ampliar constantemente mis conocimientos dentro del área
+tecnológica y desarrollar experiencia práctica utilizando diferentes
+herramientas, plataformas y tecnologías.
 
-          <span class="project-status">
-            AUTOMATION PROJECT
-          </span>
+</p>
 
-          <h3>
-            Clasificación inteligente de correos con n8n
-          </h3>
 
-          <p>
-            Desarrollo de un workflow capaz de recibir correos,
-            obtener su contenido, analizarlo mediante inteligencia
-            artificial y dirigirlo automáticamente según su clasificación.
-          </p>
+<div class="card">
 
-          <div class="tags">
+<p>
 
-            <span class="tag">n8n</span>
-            <span class="tag">Gmail</span>
-            <span class="tag">AI Agent</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Conditional Logic</span>
+Este portafolio funciona como una bitácora profesional de mi crecimiento.
 
-          </div>
+Aquí documento proyectos, automatizaciones, laboratorios, herramientas
+y tecnologías que he utilizado, junto con evidencia de los resultados
+obtenidos y los conocimientos adquiridos durante cada proceso.
 
-        </div>
+</p>
 
+</div>
 
-        <div class="card">
+</div>
 
-          <span class="project-status">
-            CYBERSECURITY
-          </span>
+</section>
 
-          <h3>
-            Cybersecurity Labs
-          </h3>
 
-          <p>
-            Espacio destinado a documentar laboratorios y ejercicios
-            prácticos relacionados con ciberseguridad, análisis,
-            redes y herramientas defensivas.
-          </p>
+<section id="areas">
 
-          <div class="tags">
+<div class="container">
 
-            <span class="tag">Cybersecurity</span>
-            <span class="tag">Labs</span>
-            <span class="tag">Networking</span>
+<h2 class="section-title">
+Áreas de conocimiento
+</h2>
 
-          </div>
+<p class="section-subtitle">
 
-        </div>
+Áreas tecnológicas en las que actualmente tengo experiencia práctica
+o estoy desarrollando conocimientos.
 
+</p>
 
-        <div class="card">
 
-          <span class="project-status">
-            COMING SOON
-          </span>
+<div class="grid">
 
-          <h3>
-            Próximo proyecto
-          </h3>
 
-          <p>
-            Esta sección crecerá a medida que desarrolle nuevos
-            proyectos, automatizaciones y prácticas de ciberseguridad.
-          </p>
+<div class="card">
 
-          <div class="tags">
+<h3>
+⚙️ Automatización
+</h3>
 
-            <span class="tag">Learning</span>
-            <span class="tag">Projects</span>
+<p>
 
-          </div>
+Creación de workflows, automatización de procesos, integración entre
+servicios y utilización de inteligencia artificial dentro de flujos
+automatizados.
 
-        </div>
+</p>
 
+</div>
 
-      </div>
-    </div>
-  </section>
 
+<div class="card">
 
-  <section id="learning">
-    <div class="container">
+<h3>
+🛡️ Ciberseguridad
+</h3>
 
-      <h2 class="section-title">
-        Currently Learning
-      </h2>
+<p>
 
-      <p class="section-subtitle">
-        Áreas en las que actualmente estoy fortaleciendo mis conocimientos.
-      </p>
+Desarrollo de conocimientos y prácticas relacionadas con seguridad,
+redes, análisis y herramientas utilizadas dentro del área de
+ciberseguridad.
 
-      <div class="grid">
+</p>
 
+</div>
 
-        <div class="card">
 
-          <h3>Automation</h3>
+<div class="card">
 
-          <p>
-            Creación de workflows, integraciones entre servicios,
-            automatización de procesos y utilización de
-            inteligencia artificial.
-          </p>
+<h3>
+💻 Tecnología
+</h3>
 
-        </div>
+<p>
 
+Aprendizaje y utilización de nuevas plataformas, herramientas y
+tecnologías aplicadas a la solución de problemas y optimización de
+procesos.
 
-        <div class="card">
+</p>
 
-          <h3>Cybersecurity</h3>
+</div>
 
-          <p>
-            Fundamentos de seguridad, redes, análisis de amenazas
-            y herramientas utilizadas en entornos de ciberseguridad.
-          </p>
 
-        </div>
+<div class="card">
 
+<h3>
+🤖 Inteligencia Artificial
+</h3>
 
-        <div class="card">
+<p>
 
-          <h3>Technical Documentation</h3>
+Utilización de herramientas de inteligencia artificial dentro de
+automatizaciones y procesos tecnológicos.
 
-          <p>
-            Documentación de proyectos y procesos técnicos de
-            forma clara, estructurada y profesional.
-          </p>
+</p>
 
-        </div>
+</div>
 
 
-      </div>
-    </div>
-  </section>
+</div>
 
+</div>
 
-  <section id="contact">
-    <div class="container">
+</section>
 
-      <h2 class="section-title">
-        Contacto
-      </h2>
 
-      <p class="section-subtitle">
-        Interesada en oportunidades para continuar desarrollando
-        experiencia práctica en tecnología, automatización y ciberseguridad.
-      </p>
+<section id="skills">
 
-      <div class="buttons">
+<div class="container">
 
+<h2 class="section-title">
+Herramientas y tecnologías
+</h2>
 
-        <a
-          class="btn btn-primary"
-          href="https://github.com/Senaidaliss13"
-          target="_blank"
-        >
-          GitHub
-        </a>
+<p class="section-subtitle">
 
+Herramientas con las que he trabajado y que forman parte de mi
+experiencia práctica.
 
-        <a
-          class="btn btn-secondary"
-          href="https://www.linkedin.com/in/senaidatenorio/"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
+</p>
 
 
-        <a
-          class="btn btn-secondary"
-          href="mailto:senaida.tenorio.rudas@gmail.com"
-        >
-          Email
-        </a>
+<div class="skills">
 
+<span class="skill">n8n</span>
 
-      </div>
+<span class="skill">Workflow Automation</span>
 
-    </div>
-  </section>
+<span class="skill">GitHub</span>
 
+<span class="skill">AI Agents</span>
 
-  <footer>
+<span class="skill">Gmail Integrations</span>
 
-    <div class="container">
-      © 2026 Senaida Tenorio · Cybersecurity & Automation Portfolio
-    </div>
+<span class="skill">Conditional Logic</span>
 
-  </footer>
+<span class="skill">Cybersecurity Fundamentals</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+Proyectos y evidencias
+</h2>
+
+<p class="section-subtitle">
+
+Proyectos y prácticas que demuestran de forma concreta las herramientas
+y conocimientos que he utilizado.
+
+</p>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<span class="status">
+AUTOMATION PROJECT
+</span>
+
+<h3>
+Clasificación inteligente de correos con n8n
+</h3>
+
+<p>
+
+Desarrollo de un workflow capaz de detectar correos entrantes,
+obtener su contenido, analizarlo mediante inteligencia artificial
+y dirigirlos automáticamente según su clasificación.
+
+</p>
+
+
+<div class="tags">
+
+<span class="tag">n8n</span>
+
+<span class="tag">Gmail</span>
+
+<span class="tag">AI Agent</span>
+
+<span class="tag">Automation</span>
+
+<span class="tag">Conditional Logic</span>
+
+</div>
+
+
+<div class="evidence">
+
+📁 Evidencias del proyecto próximamente disponibles.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<span class="status">
+CYBERSECURITY
+</span>
+
+<h3>
+Laboratorios de Ciberseguridad
+</h3>
+
+<p>
+
+Espacio destinado a documentar ejercicios, laboratorios y prácticas
+relacionadas con seguridad informática, redes y herramientas de
+ciberseguridad.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">Cybersecurity</span>
+
+<span class="tag">Labs</span>
+
+<span class="tag">Networking</span>
+
+</div>
+
+<div class="evidence">
+
+📁 Las evidencias serán agregadas a medida que realice nuevos laboratorios.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<span class="status">
+PORTFOLIO GROWTH
+</span>
+
+<h3>
+Nuevos proyectos
+</h3>
+
+<p>
+
+Esta sección continuará creciendo a medida que aprenda nuevas
+tecnologías, herramientas y desarrolle nuevos proyectos.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">Technology</span>
+
+<span class="tag">Projects</span>
+
+<span class="tag">Learning</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="learning">
+
+<div class="container">
+
+<h2 class="section-title">
+Actualmente aprendiendo
+</h2>
+
+<p class="section-subtitle">
+
+Tecnologías y áreas que actualmente estoy estudiando o practicando.
+Esta sección es independiente de las herramientas que ya he utilizado
+en proyectos.
+
+</p>
+
+
+<div class="grid">
+
+
+<div class="card learning-card">
+
+<h3>
+Automatización
+</h3>
+
+<p>
+
+Continúo profundizando en la creación de workflows, integraciones,
+automatización de procesos y utilización de inteligencia artificial.
+
+</p>
+
+</div>
+
+
+<div class="card learning-card">
+
+<h3>
+Ciberseguridad
+</h3>
+
+<p>
+
+Continúo desarrollando conocimientos relacionados con seguridad,
+redes, análisis y herramientas utilizadas dentro de entornos
+tecnológicos.
+
+</p>
+
+</div>
+
+
+<div class="card learning-card">
+
+<h3>
+Nuevas tecnologías
+</h3>
+
+<p>
+
+Exploro nuevas herramientas y tecnologías que puedan ampliar mis
+capacidades técnicas y formar parte de futuros proyectos.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contacto
+</h2>
+
+<p class="section-subtitle">
+
+Abierta a oportunidades profesionales que me permitan continuar
+desarrollando experiencia, aportar mis conocimientos y seguir
+creciendo dentro del área tecnológica.
+
+</p>
+
+
+<div class="buttons">
+
+
+<a
+class="btn btn-primary"
+href="https://github.com/Senaidaliss13"
+target="_blank">
+
+GitHub
+
+</a>
+
+
+<a
+class="btn btn-secondary"
+href="https://www.linkedin.com/in/senaidatenorio/"
+target="_blank">
+
+LinkedIn
+
+</a>
+
+
+<a
+class="btn btn-secondary"
+href="mailto:senaida.tenorio.rudas@gmail.com">
+
+Email
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container">
+
+© 2026 Senaida Tenorio · Technology Portfolio
+
+</div>
+
+</footer>
 
 
 </body>
+
 </html>
